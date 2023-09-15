@@ -1,9 +1,12 @@
+import HomePage from "./components/Home/HomePage";
 import Navbar from "./components/Navbar/Navbar";
 function App() {
   return (
     <div className="grid grid-rows-[80px,auto]">
       <Navbar />
-      <main>all routing</main>
+      <main>
+        <HomePage />
+      </main>
     </div>
   );
 }

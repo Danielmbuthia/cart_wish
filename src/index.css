@@ -15,3 +15,12 @@ body {
 .nav_bar {
   @apply flex flex-col md:flex-row items-center justify-between py-4 md:py-0 px-4 md:px-[40px] bg-[#fff];
 }
+.hero_section {
+  @apply grid grid-cols-1 md:grid-cols-2 h-[550px] md:h-auto py-6 md:py-0 px-4 md:px-8 bg-black text-white;
+}
+.hero_section_div {
+  @apply flex items-center justify-center flex-col text-center md:text-left;
+}
+.hero_section_a_tag {
+  @apply mt-4 md:mt-8 py-3 px-6 md:py-4 md:px-8 uppercase tracking-normal font-bold border-2 border-solid border-white rounded-full bg-white text-black transition-all duration-300 hover:bg-transparent hover:text-white;
+}
