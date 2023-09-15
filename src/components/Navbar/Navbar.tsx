@@ -1,4 +1,11 @@
 import { useState } from "react";
+import LinksWithIcons from "./LinksWithIcons";
+import Rocket from "../../assets/rocket.png";
+import Star from "../../assets/glowing-star.png";
+import IdButton from "../../assets/id-button.png";
+import Memo from "../../assets/memo.png";
+import Order from "../../assets/package.png";
+import Lock from "../../assets/locked.png";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
@@ -15,7 +22,7 @@ const Navbar = () => {
           <input
             type="text"
             placeholder="Search"
-            className="flex-grow px-2 text-xl border-none outline-none h-full w-full md:w-auto"
+            className="flex-grow px-2 text-xl border-none outline-none h-full md:w-auto"
           />
           <button
             type="submit"
@@ -31,10 +38,19 @@ const Navbar = () => {
           ☰
         </button>
       </div>
-      <div className={`md:flex ${menuOpen ? "block" : "hidden"}`}>
-        <p className="md:mr-4 mt-4 md:mt-2">Item 1</p>
-        <p className="md:mr-4 mt-4 md:mt-2">Item 2</p>
-        <p className="mt-4 md:mt-2">Item 3</p>
+      <div className={`md:flex ${menuOpen ? "block" : "hidden"} gap-3`}>
+        <LinksWithIcons title="Home" link="/" emoji={Rocket} />
+        <LinksWithIcons title="Products" link="/products" emoji={Star} />
+        <LinksWithIcons title="Login" link="/login" emoji={IdButton} />
+        <LinksWithIcons title="SignUp" link="/signup" emoji={Memo} />
+        <LinksWithIcons title="My Orders" link="/my-orders" emoji={Order} />
+        <LinksWithIcons title="Logout" link="/logout" emoji={Lock} />
+        <a href="/cart" className="flex items-center">
+          Cart{" "}
+          <p className="flex justify-center font-normal w-5 h-5 rounded-full bg-[#6457f9] text-white text-base ml-1 items-center">
+            0
+          </p>
+        </a>
       </div>
     </nav>
   );
