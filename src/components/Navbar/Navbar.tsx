@@ -24,10 +24,7 @@ const Navbar = () => {
             placeholder="Search"
             className="flex-grow px-2 text-xl border-none outline-none h-full md:w-auto"
           />
-          <button
-            type="submit"
-            className="h-full px-2 text-xl border-none bg-[#6457f9] text-white rounded-md cursor-pointer"
-          >
+          <button type="submit" className="search_button">
             Search
           </button>
         </form>

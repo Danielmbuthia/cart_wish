@@ -24,3 +24,6 @@ body {
 .hero_section_a_tag {
   @apply mt-4 md:mt-8 py-3 px-6 md:py-4 md:px-8 uppercase tracking-normal font-bold border-2 border-solid border-white rounded-full bg-white text-black transition-all duration-300 hover:bg-transparent hover:text-white;
 }
+.search_button {
+  @apply h-full px-2 text-xl border-none bg-[#6457f9] text-white rounded-md cursor-pointer;
+}
