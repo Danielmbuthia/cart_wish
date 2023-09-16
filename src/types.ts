@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export interface LinksWithIconsProps {
   title: string;
   emoji: string;
@@ -10,4 +12,9 @@ export interface HeroSectionProps {
   subtitle: string;
   link: string;
   image: string;
+}
+
+export interface TableHeadingProps {
+  headings: string[];
+  children: ReactNode;
 }

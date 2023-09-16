@@ -1,4 +1,5 @@
 import { useState } from "react";
+import QuantityInput from "../Common/QuantityInput";
 
 const product = {
   id: 1,
@@ -53,16 +54,7 @@ const SingleProductPage = () => {
         </p>
         <h2 className="text-xl font-bold">Quantity:</h2>
         <div className="flex items-center text-xl font-bold mt-1 mb-4">
-          <button
-            className="w-9 h-9 text-2xl bg-[#ff8848] text-white border-none rounded-full cursor-pointer disabled:opacity-30 disabled:cursor-default"
-            disabled
-          >
-            -
-          </button>
-          <p className="mx-4 md:mx-6 lg:mx-10 text-center">1</p>
-          <button className="w-9 h-9 text-2xl bg-[#ff8848] text-white border-none rounded-full cursor-pointer">
-            +
-          </button>
+          <QuantityInput />
         </div>
         <button className="w-full md:w-auto bg-[#ff8848] text-white py-2 px-4 rounded-md shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#ff8848]">
           Add to Cart
